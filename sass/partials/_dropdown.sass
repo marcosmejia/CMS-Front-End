@@ -4,11 +4,11 @@
 
 .chzn-container 
 	font-size: 12px
-	position: relative
 	zoom: 1
 	display: inline-block
 	*display: inline
 	color: #aaaaaa
+	width: 100% !important
 	.chzn-drop 
 		position: absolute
 		top: 29px
@@ -25,20 +25,19 @@
 		display: block
 		overflow: hidden
 		white-space: nowrap
-		position: relative
 		height: 45px
 		line-height: 46px
 		color: #444444
 		text-decoration: none
 		abbr.search-choice-close
 			position: absolute
-			right: 25px
+			right: 35px
 			top: 14px
 			font-size: 16px
 		.icon-arrow-down, .icon-arrow-up
 			position: absolute
 			top: 16px
-			right: 5px
+			right: 15px
 		.icon-arrow-up
 			display: none
 		&.chzn-single-with-drop
@@ -60,13 +59,13 @@
 		z-index: 1010
 		background: white
 		display: block
-		margin: 0 -11px
 		border: 1px solid #ccc
 		background: $LightGray
 		input 
 			background: #fff 
 			padding: 4px 5px 4px 5px
 			outline: 0
+			width: 100% !important
 			border: 1px solid #ccc
 			border-radius: 2px
 			font-family: sans-serif
@@ -152,54 +151,50 @@
 /* @end */
 
 /* @group Results */
-.chzn-container 
-	.chzn-results 
-		margin: -2px -11px 0 -11px
-		padding: 0
-		background: white
-		border-left: 1px solid #ccc
-		border-bottom: 1px solid #ccc
-		border-right: 1px solid #ccc
-		border-radius: 0 0 4px 4px
-		max-height: 240px
-		position: relative
-		overflow-x: hidden
-		overflow-y: auto
-		-webkit-overflow-scrolling: touch
-		li 
-			display: none
-			line-height: 15px
-			padding: 5px 6px
-			margin: 0
-			list-style: none
-		.active-result 
-			cursor: pointer
-			display: list-item
-		.highlighted 
-			background-color: $Blue
-			color: #fff
+.chzn-container .chzn-results 
+	padding: 0
+	background: white
+	border-left: 1px solid #ccc
+	border-bottom: 1px solid #ccc
+	border-right: 1px solid #ccc
+	border-radius: 0 0 4px 4px
+	max-height: 240px
+	position: relative
+	overflow-x: hidden
+	overflow-y: auto
+	-webkit-overflow-scrolling: touch
+	li 
+		display: none
+		line-height: 15px
+		padding: 5px 6px
+		margin: 0
+		list-style: none
+	.active-result 
+		cursor: pointer
+		display: list-item
+	.highlighted 
+		background-color: $Blue
+		color: #fff
 
-.chzn-container-multi 
-	.chzn-results 
-		margin: -2px -11px 0 -11px
-		border-radius: 0 0 4px 4px
-		padding: 0
-		background: white
-		border: 1px solid #ccc
-		li em 
-			background: #feffde
-			font-style: normal
-		.highlighted em 
-			background: transparent
-		.no-results 
-			background: #f4f4f4
-			display: list-item
-		.group-result 
-			font-family: $schulbuchbold
-			cursor: default
-			color: #333
-		.group-option 
-			padding-left: 15px
+.chzn-container-multi .chzn-results 
+	border-radius: 0 0 4px 4px
+	padding: 0
+	background: white
+	border: 1px solid #ccc
+	li em 
+		background: #feffde
+		font-style: normal
+	.highlighted em 
+		background: transparent
+	.no-results 
+		background: #f4f4f4
+		display: list-item
+	.group-result 
+		font-family: $schulbuchbold
+		cursor: default
+		color: #333
+	.group-option 
+		padding-left: 15px
 
 .chzn-container-multi 
 	.chzn-drop 
