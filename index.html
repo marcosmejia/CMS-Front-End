@@ -5,6 +5,7 @@
 	<link href="css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 	<link href="css/chosen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+	<!--[if lte IE 7]><script src="js/lte-ie7.js"></script><![endif]-->
   	<script src="js/chosen.jquery.js" type="text/javascript"></script>
   	<script type="text/javascript"> 
 	  	$(document).ready(function() {
@@ -64,7 +65,7 @@
 				<div class="cms-page-tile page-tile-active">
 					<a href="#">
 						<div class="thumbnail">
-							<span class="overlay"></span>
+							<div class="overlay"><span aria-hidden="true" class="icon-big-arrow-right"></span></div>
 							<img src="images/homepage.jpg" width="216" height="auto" />
 						</div>
 					</a>

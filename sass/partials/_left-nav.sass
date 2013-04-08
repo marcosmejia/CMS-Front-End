@@ -141,8 +141,6 @@
 		color: $DarkGray
 		border-radius: 3px
 		margin: 0 0 10px
-		+transition-property(background, color)
-		+transition-duration(0.1s)
 		.thumbnail
 			position: relative
 			img
@@ -166,6 +164,19 @@
 			cursor: pointer
 			.icon-pencil
 				color: white
+			.thumbnail > .overlay
+				position: absolute
+				display: table
+				width: 216px
+				height: 121px
+				background: rgba(77,185,240,.8)
+				font-size: 63px
+				text-align: center
+				vertical-align: middle
+				color: white
+				.icon-big-arrow-right
+					display: table-cell
+					vertical-align: middle
 		&.page-tile-active
 			background: $Gray
 			color: white
@@ -173,7 +184,14 @@
 				color: white
 			.thumbnail > .overlay
 				position: absolute
-				display: block
+				display: table
 				width: 216px
 				height: 121px
-				background: rgba(178,178,179,.8)
+				background: rgba(178,178,179,.5)
+				font-size: 63px
+				text-align: center
+				vertical-align: middle
+				color: white
+				.icon-big-arrow-right
+					display: table-cell
+					vertical-align: middle
