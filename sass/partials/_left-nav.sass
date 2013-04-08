@@ -1,0 +1,179 @@
+.cms-wrapper
+	position: fixed
+.cms-main-left
+	display: block
+	width: $NavWidth
+	height: 100%
+	min-height: 768px
+	background: $Black
+	float: left
+.cms-header
+	@extend .clearfix
+	display: block
+	.cms-logo
+		float: left
+		color: $DarkGray
+		text-decoration: none
+		+transition-property(color)
+		+transition-duration(0.3s)
+		padding: 15px
+		&:hover
+			color: white
+	.cms-user
+		float: right
+		width: 194px
+		.cms-user-bold
+			font-family: $schulbuchbold
+			font-size: 14px
+			color: white
+			display: block
+			text-align: right
+		.cms-user-activity
+			font-family: $schulbuchbold
+			font-size: 12px
+			color: $DarkGray
+			display: block
+			text-align: right
+			padding: 4px 0
+		.cms-user-text
+			padding: 15px 5px 0 0
+	.cms-user-settingslink
+		padding: 13px
+		+transition-property(background)
+		+transition-duration(0.3s)
+		&:hover
+			background: #000
+		&.user-active
+			background: #000
+		.cms-user-avatar
+			+border-radius(20px)
+			+box-shadow(rgba(black, .6) 0 2px 2px)
+.cms-navigation
+	@extend .clearfix
+	display: block
+	background: $Red
+	width: $NavWidth - 18px
+	padding: 0 9px
+	+box-shadow(rgba(black, .2) 0 -3px 0 inset)
+	.nav-item
+		display: block
+		float: left
+		width: 58px
+		font-size: 36px
+		text-decoration: none
+		text-align: center
+		padding: 20px 0
+		@include red-icon-hover
+		&.nav-active
+			color: white
+			&:hover
+				opacity: 1
+.cms-tools
+	@extend .clearfix
+	display: block
+	background: $LightGray
+	padding: 0 13px 20px
+	font-family: $schulbuchbold
+	border-bottom: 1px solid $Gray
+	.subnavigation
+		@extend .clearfix
+		text-transform: uppercase
+		font-size: 10px
+		padding: 20px 0
+		border-bottom: 1px solid $BorderColor
+		.subnav-pill
+			display: block
+			float: left
+			text-align: center
+			color: $DarkGray
+			padding: 8px 0
+			+border-radius(20px)
+			+transition-property(color)
+			+transition-duration(0.3s)
+			&.three-up
+				width: $InnerNavContent/3
+			&.pill-active
+				background: $Gray
+				color: white
+				&:hover
+					color: white
+			&:hover
+				color: black
+	.cms-nav-searcharea
+		padding: 20px 0 0 0
+	.sub-tools
+		padding: 20px 0 0 0
+.searchbox, .text-box
+	padding: 0 10px
+	border: 1px solid #d1d0cf
+	+border-radius(3px)
+	+background-clip(padding-box)
+	background-color: #fff
+	+box-shadow(inset 0 1px 3px rgba(0,0,0,.1))
+	color: $Gray
+	.icon-search
+		vertical-align: middle
+		margin: 0 5px 0 0
+	.searchbox-input
+		background: none
+		+box-shadow(none)
+		outline: none
+		border: none
+		height: 40px
+		width: 179px
+		font-size: 12px
+	.text-box-input
+		@extend .searchbox-input
+		width: 100%
+		-webkit-appearance: none
+		-moz-appearance: none
+		appearance: none
+.text-box
+	margin: 10px 0 15px
+
+.cms-content-section
+	padding: 20px 13px
+	+box-shadow(inset 0 3px 0 rgba(0,0,0,.7))
+	.cms-page-tile
+		@extend .clearfix
+		padding: 4px
+		background: white
+		color: $DarkGray
+		+border-radius(3px)
+		margin: 0 0 10px
+		+transition-property(background, color)
+		+transition-duration(0.1s)
+		.thumbnail
+			position: relative
+			img
+				+border-radius(2px)
+			.overlay
+				display: none
+		.pagetitle
+			@extend .clearfix
+			display: block
+			font-family: $schulbuchbold
+			font-size: 12px
+			line-height: 16px
+			vertical-align: middle
+			padding: 10px
+			.icon-pencil
+				color: $DarkGray
+				font-size: 16px
+		&:hover
+			background: $Blue
+			color: white
+			cursor: pointer
+			.icon-pencil
+				color: white
+		&.page-tile-active
+			background: $Gray
+			color: white
+			.icon-pencil
+				color: white
+			.thumbnail > .overlay
+				position: absolute
+				display: block
+				width: 216px
+				height: 121px
+				background: rgba(178,178,179,.8)

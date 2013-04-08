@@ -1,0 +1,147 @@
+.clearfix:after 
+	content: "."
+	display: block
+	clear: both
+	visibility: hidden
+	line-height: 0
+	height: 0
+ 
+.clearfix 
+	display: inline-block
+ 
+html[xmlns] .clearfix 
+	display: block
+ 
+* html .clearfix 
+	height: 1%
+
+a
+	text-decoration: none
+
+body, html, .cms-wrapper, .cms-right-wrapper
+	height: 100%
+	-webkit-font-smoothing: antialiased
+
+.rfloat
+	float: right
+.lfloat
+	float: left
+
+/*Common Colors*/
+
+$Black: #252525
+$DarkGray: #676767
+$Gray: #b2b2b3
+$LightGray: #f8f8f8
+
+$Red: #ff2d13
+$DarkRed: #a61e0c
+
+$Yellow: #ffb41a
+$DarkYellow: #c18100
+
+$Blue: #4db9f0
+$DarkBlue: #2e8cbc
+
+$Green: #23cb48
+$DarkGreen: #009020
+
+$BorderColor: #e2e1e0
+
+@mixin red-icon-hover
+	color: $DarkRed
+	+transition-property(color, opacity)
+	+transition-duration(0.3s)
+	&:hover
+		opacity: .6
+		color: black
+
+/*Common Sizes*/
+
+$NavWidth: 250px
+$InnerNavContent: 224px
+
+/*Fonts*/
+$schulbuch: Schulbuch, Arial, sans-serif
+$schulbuchbold: SchulbuchBold, Arial, sans-serif
+$helvetica: 'Helvetica Neue', Helvetica, Arial, sans-serif
+$monospaced: "Monaco", "Courier New", courier, monospace
+
+/*Buttons*/
+.button
+	padding: 8px
+	color: white
+	font-family: $schulbuchbold
+	font-size: 14px
+	+border-radius(3px)
+	+transition-property(background, color)
+	+transition-duration(0.3s)
+	span
+		color: black
+		opacity: .3
+		vertical-align: middle
+		margin: 0 5px 0 0
+		font-size: 16px
+	&.blue
+		background: $Blue
+		&:hover
+			background: $DarkBlue
+	&.green
+		background: $Green
+		&:hover
+			background: $DarkGreen
+	&.yellow
+		background: $Yellow
+		&:hover
+			background: $DarkYellow
+	&.red
+		background: $Red
+		&:hover
+			background: $DarkRed
+	&.tool-button
+		margin: 0 5px 0 0
+		span
+			color: $DarkGray
+			opacity: 1
+			margin: 0 0 0 0
+			+transition-property(background, color)
+			+transition-duration(0.3s)
+		background: none
+		&:hover
+			span
+				color: black
+		&.tool-active
+			background: $Gray
+			span	
+				color: white
+
+/*Make Right Main Content have fluid Width*/
+.content-wrapper
+	width: 100%
+	float: left
+	.content-column
+		margin: 0 0 0 250px
+		&.right-pane
+			margin: 0 380px 0 250px
+
+/*White Border Bar*/
+.right-bar
+	display: block
+	width: 10px
+	height: 100%
+	background: #fff
+	float: left
+	+box-shadow(rgba(black, 0.9) 0 0 1px inset, rgba(black, .1) 2px 0 0)
+.left-bar
+	display: block
+	width: 10px
+	height: 100%
+	background: #fff
+	float: right
+	+box-shadow(rgba(black, 0.9) 0 0 1px inset, rgba(black, .1) -2px 0 0)
+
+
+
+
+
+	

@@ -1,0 +1,63 @@
+/*Right Edit Pane*/
+.cms-right-wrapper
+	position: fixed
+	right: 0
+.cms-right-edit-pane
+	display: block
+	width: 380px
+	height: 100%
+	background: $LightGray
+	min-height: 460px
+	float: right
+.cms-edit-header
+	@extend .clearfix
+	padding: 15px 20px
+	display: block
+	background: $Red
+	+box-shadow(rgba(black, .2) 0 -3px 0 inset)
+	h1
+		font-family: $schulbuch
+		font-weight: normal
+		color: white
+		font-size: 28px
+		float: left
+	.close-icon
+		float: right
+		font-size: 28px
+		@include red-icon-hover
+.cms-edit-section
+	padding: 20px 40px
+	font-family: $schulbuchbold	
+	label
+		font-size: 12px
+		text-transform: uppercase
+		color: $Black
+		.required
+			color: $Red
+	.subnavigation
+		@extend .clearfix
+		text-transform: uppercase
+		font-size: 14px
+		.subnav-pill
+			display: block
+			float: left
+			text-align: center
+			color: $DarkGray
+			padding: 10px 0
+			+border-radius(20px)
+			+transition-property(color)
+			+transition-duration(0.3s)
+			&.two-up
+				width: 150px
+			&.pill-active
+				background: $Gray
+				color: white
+				&:hover
+					color: white
+			&:hover
+				color: black
+.module-collapse-button
+	font-family: $schulbuch
+	font-size: 20px
+	color: $Red
+	padding: 0 20px

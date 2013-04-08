@@ -1,0 +1,301 @@
+/* @group Base */
+.chzn-select, .chzn-select-deselect
+	width: 100%
+
+.chzn-container 
+	font-size: 12px
+	position: relative
+	zoom: 1
+	display: inline-block
+	*display: inline
+	color: #aaaaaa
+	.chzn-drop 
+		position: absolute
+		top: 29px
+		left: 0
+		z-index: 1010
+/* @end */
+
+/* @group Single Chosen */
+.chzn-container-single 
+	.chzn-single 
+		-moz-background-clip : padding
+		-webkit-background-clip: padding-box
+		background-clip: padding-box
+		display: block
+		overflow: hidden
+		white-space: nowrap
+		position: relative
+		height: 45px
+		line-height: 46px
+		color: #444444
+		text-decoration: none
+		abbr.search-choice-close
+			position: absolute
+			right: 25px
+			top: 14px
+			font-size: 16px
+		.icon-arrow-down, .icon-arrow-up
+			position: absolute
+			top: 16px
+			right: 5px
+		.icon-arrow-up
+			display: none
+		&.chzn-single-with-drop
+			.icon-arrow-down
+				display: none
+			.icon-arrow-up
+				display: block
+	.chzn-default 
+		color: #999
+		font-family: sans-serif
+		font-weight: normal !important
+	.chzn-disabled > .chzn-single > abbr:hover 
+		background-position: -42px -10px
+	.chzn-search 
+		padding: 10px 10px
+		position: relative
+		margin: 0
+		white-space: nowrap
+		z-index: 1010
+		background: white
+		display: block
+		margin: 0 -11px
+		border: 1px solid #ccc
+		background: $LightGray
+		input 
+			background: #fff 
+			padding: 4px 5px 4px 5px
+			outline: 0
+			border: 1px solid #ccc
+			border-radius: 2px
+			font-family: sans-serif
+			font-size: 1em
+			margin: 0 auto
+	.chzn-drop 
+		border-radius: 0 0 4px 4px
+		-moz-background-clip : padding
+		-webkit-background-clip: padding-box
+		background-clip: padding-box
+
+/* @end */
+
+.chzn-container-single-nosearch > .chzn-search input 
+	position: absolute
+	left: -9000px
+
+
+/* @group Multi Chosen */
+.chzn-container-multi 
+	.chzn-choices 
+		margin: 0
+		padding: 0
+		cursor: text
+		overflow: hidden
+		height: auto !important
+		height: 1%
+		position: relative
+		li 
+			float: left
+			list-style: none
+		.search-field 
+			white-space: nowrap
+			margin: 0
+			padding: 0
+			input 
+				color: #666
+				background: transparent !important
+				border: 0 !important
+				font-family: sans-serif
+				font-size: 100%
+				height: 40px
+				outline: 0
+				box-shadow: none
+			.default 
+				color: #999
+		.search-choice 
+			border-radius: 30px
+			-moz-background-clip : padding
+			-webkit-background-clip: padding-box
+			background-clip: padding-box
+			background-color: $Gray
+			color: #fff
+			padding: 5px 30px 5px 10px
+			margin: 10px 3px 3px 3px
+			position: relative
+			cursor: default
+			&.search-choice-disabled 
+				background-color: #e4e4e4
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#eeeeee', GradientType=0 )
+				+background-image(linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%))
+				color: #666
+				border: 1px solid #cccccc
+				padding-right: 5px
+			.search-choice-close 
+				display: block
+				position: absolute
+				right: 8px
+				top: 4px
+				width: 14px
+				height: 14px
+				font-size: 14px
+				color: $DarkGray
+				&:hover
+					color: black
+		.search-choice-focus 
+			background: #d4d4d4
+			&:hover 
+				background-position: -42px -10px
+			.search-choice-close 
+				background-position: -42px -10px
+/* @end */
+
+/* @group Results */
+.chzn-container 
+	.chzn-results 
+		margin: -2px -11px 0 -11px
+		padding: 0
+		background: white
+		border-left: 1px solid #ccc
+		border-bottom: 1px solid #ccc
+		border-right: 1px solid #ccc
+		border-radius: 0 0 4px 4px
+		max-height: 240px
+		position: relative
+		overflow-x: hidden
+		overflow-y: auto
+		-webkit-overflow-scrolling: touch
+		li 
+			display: none
+			line-height: 15px
+			padding: 5px 6px
+			margin: 0
+			list-style: none
+		.active-result 
+			cursor: pointer
+			display: list-item
+		.highlighted 
+			background-color: $Blue
+			color: #fff
+
+.chzn-container-multi 
+	.chzn-results 
+		margin: -2px -11px 0 -11px
+		border-radius: 0 0 4px 4px
+		padding: 0
+		background: white
+		border: 1px solid #ccc
+		li em 
+			background: #feffde
+			font-style: normal
+		.highlighted em 
+			background: transparent
+		.no-results 
+			background: #f4f4f4
+			display: list-item
+		.group-result 
+			font-family: $schulbuchbold
+			cursor: default
+			color: #333
+		.group-option 
+			padding-left: 15px
+
+.chzn-container-multi 
+	.chzn-drop 
+		.result-selected 
+			display: none
+
+.chzn-container 
+	.chzn-results-scroll 
+		background: white
+		margin: 0 4px
+		position: absolute
+		text-align: center
+		width: 321px /* This should by dynamic with js */
+		z-index: 1
+		span 
+			display: inline-block
+			height: 17px
+			text-indent: -5000px
+			width: 9px
+	.chzn-results-scroll-down 
+		bottom: 0
+		span 
+			background: url('chosen-sprite.png') no-repeat -4px -3px
+
+.chzn-container > .chzn-results-scroll-up span 
+	background: url('chosen-sprite.png') no-repeat -22px -3px
+
+/* @end */
+
+/* @group Active*/
+
+.chzn-container-active > .chzn-choices > .search-field input 
+	color: #111 !important
+
+/* @end */
+
+/* @group Disabled Support */
+.chzn-disabled 
+	cursor: default
+	opacity: 0.5 !important
+
+.chzn-disabled > .chzn-single 
+	cursor: default
+
+.chzn-disabled > .chzn-choices > .search-choice > .search-choice-close 
+	cursor: default
+
+
+/* @group Right to Left */
+.chzn-rtl
+	text-align: right 
+.chzn-rtl > .chzn-single
+	padding: 0 8px 0 0 
+	overflow: visible 
+.chzn-rtl > .chzn-single span
+	margin-left: 26px 
+	margin-right: 0 
+	direction: rtl 
+.chzn-rtl > .chzn-single div
+	left: 3px 
+	right: auto 
+.chzn-rtl > .chzn-single abbr 
+	left: 26px
+	right: auto
+
+.chzn-rtl > .chzn-choices > .search-field input
+	direction: rtl 
+.chzn-rtl > .chzn-choices li
+	float: right 
+.chzn-rtl > .chzn-choices > .search-choice
+	padding: 3px 5px 3px 19px 
+	margin: 3px 5px 3px 0 
+.chzn-rtl > .chzn-choices > .search-choice > .search-choice-close
+	left: 4px 
+	right: auto 
+.chzn-rtl.chzn-container-single > .chzn-results
+	margin: 0 0 4px 4px 
+	padding: 0 4px 0 0 
+.chzn-rtl > .chzn-results > .group-option
+	padding-left: 0 
+	padding-right: 15px 
+.chzn-rtl.chzn-container-active > .chzn-single-with-drop div
+	border-right: none 
+.chzn-rtl > .chzn-search input 
+	background: #fff url('chosen-sprite.png') no-repeat -30px -20px
+	background: url('chosen-sprite.png') no-repeat -30px -20px, -webkit-gradient(linear, 0 0, 0 100%, color-stop(1%, #eeeeee), color-stop(15%, #ffffff))
+	background: url('chosen-sprite.png') no-repeat -30px -20px, -webkit-linear-gradient(top, #eeeeee 1%, #ffffff 15%)
+	background: url('chosen-sprite.png') no-repeat -30px -20px, -moz-linear-gradient(top, #eeeeee 1%, #ffffff 15%)
+	background: url('chosen-sprite.png') no-repeat -30px -20px, -o-linear-gradient(top, #eeeeee 1%, #ffffff 15%)
+	background: url('chosen-sprite.png') no-repeat -30px -20px, linear-gradient(#eeeeee 1%, #ffffff 15%)
+	padding: 4px 5px 4px 20px
+	direction: rtl
+
+.chzn-container-single.chzn-rtl > .chzn-single div b 
+	background-position: 6px 2px
+
+.chzn-container-single.chzn-rtl > .chzn-single-with-drop div b 
+	background-position: -12px 2px
+
+/* @end */
