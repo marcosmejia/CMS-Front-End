@@ -148,6 +148,17 @@
 				border-radius: 2px
 			.overlay
 				display: none
+				position: absolute
+				width: 216px
+				height: 121px
+				background: rgba(77,185,240,.8)
+				font-size: 63px
+				text-align: center
+				vertical-align: middle
+				color: white
+			.icon-big-arrow-right
+				display: table-cell
+				vertical-align: middle
 		.pagetitle
 			@extend .clearfix
 			display: block
@@ -165,34 +176,17 @@
 			cursor: pointer
 			.icon-pencil
 				color: white
-			.thumbnail > .overlay
-				position: absolute
+			.overlay
 				display: table
-				width: 216px
-				height: 121px
-				background: rgba(77,185,240,.8)
-				font-size: 63px
-				text-align: center
-				vertical-align: middle
-				color: white
-				.icon-big-arrow-right
-					display: table-cell
-					vertical-align: middle
+			.icon-big-arrow-right
+				opacity: 1
 		&.page-tile-active
 			background: $Gray
 			color: white
 			.icon-pencil
 				color: white
-			.thumbnail > .overlay
-				position: absolute
+			.overlay
 				display: table
-				width: 216px
-				height: 121px
 				background: rgba(178,178,179,.5)
-				font-size: 63px
-				text-align: center
-				vertical-align: middle
-				color: white
-				.icon-big-arrow-right
-					display: table-cell
-					vertical-align: middle
+			.icon-big-arrow-right
+				opacity: 1
