@@ -67,3 +67,41 @@
 	font-size: 20px
 	color: $Red
 	padding: 0 20px
+.cms-module-list
+	float: right
+	background: $Black
+	height: 100%
+	box-shadow: rgba(black, .9) -3px 0 0 inset
+	font-family: $schulbuch
+	color: $DarkGray
+	.bullet
+		color: $Black
+		background: $DarkGray
+		border-radius: 60px
+		display: block
+		width: 20px
+		height: 20px
+		text-align: center
+		font-size: 12px
+		line-height: 20px
+		float: left
+		margin: 0 10px 0 0
+	.module, .article
+		padding: 15px 10px
+		width: 250px
+		white-space: nowrap
+		line-height: 18px
+		overflow: hidden
+		text-overflow: ellipsis
+		box-shadow: rgba(black, .3) -3px 0 0 inset
+		cursor: pointer
+		&.selected
+			color: white
+			background: #333333
+			font-family: $schulbuchbold
+			.bullet
+				background: white
+			&:hover
+				background: #333
+		&:hover
+			background: #191919
